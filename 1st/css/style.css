@@ -1,0 +1,184 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+section {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+section:last-child {
+    border-bottom: none;
+}
+
+h1, h2, h3 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.8em;
+    color: #444;
+}
+
+#hero {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #eef;
+    border-radius: 5px;
+    position: relative; /* For meteor effect positioning */
+    overflow: hidden; /* To contain the meteor */
+}
+
+#hero h1 {
+    margin-bottom: 10px;
+}
+
+#hero p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+#contact p a {
+    margin-right: 10px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+#contact p a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: #fff;
+    margin-top: 30px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    h2 {
+        font-size: 1.5em;
+    }
+}
+
+/* Meteor Animation */
+.meteor {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background-color: #ffcc00; /* Bright yellow for visibility */
+    border-radius: 50%;
+    box-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00, 0 0 30px #ffcc00;
+    animation: fall 3s linear infinite;
+    opacity: 0;
+}
+
+@keyframes fall {
+    0% {
+        transform: translate(-100px, -100px) scale(1);
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate(calc(100vw - 100px), calc(100vh - 100px)) scale(0.5); /* Adjust end position based on viewport */
+        opacity: 0;
+    }
+}
+
+/* Multiple meteors with different delays and starting positions */
+.meteor:nth-child(1) {
+    top: 10%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.meteor:nth-child(2) {
+    top: 20%;
+    left: 50%;
+    animation-delay: 0.5s;
+    width: 3px; /* Slightly smaller */
+    height: 3px;
+}
+
+.meteor:nth-child(3) {
+    top: 5%;
+    left: 80%;
+    animation-delay: 1s;
+    background-color: #ff9933; /* Different color */
+    box-shadow: 0 0 10px #ff9933, 0 0 20px #ff9933, 0 0 30px #ff9933;
+}
+
+.person {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-left: 3px solid #007bff;
+}
+
+.person h3 {
+    margin-top: 0;
+}
+

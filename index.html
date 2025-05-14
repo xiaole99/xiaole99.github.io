@@ -5,65 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xiaole Yin - Academic Profile</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="people.html">People</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="hero">
-            <h1>Xiaole Yin</h1>
-            <p>Research Fellow in Medicine</p>
-            <p>Brigham and Women's Hospital, Harvard Medical School</p>
-        </section>
+    <div class="entrance-animation">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="people.html">People</a></li>
+                </ul>
+            </nav>
+        </header>
 
-        <section id="biography">
-            <h2>About Me</h2>
-            <p>Dr. Xiaole Yin is a dedicated and accomplished researcher in the field of bioinformatics, with a strong focus on the human microbiome, environmental microbiome, antibiotic resistance, and multi-omics. Currently, Dr. Yin holds the position of Research Fellow in Medicine at Brigham and Women's Hospital and Harvard Medical School, a role she has occupied since her postdoctoral appointment began.</p>
-            <p>Her academic journey commenced with a Bachelor's Degree from Shandong University. Following this, she pursued and obtained her MPhil degree. Dr. Yin's doctoral studies were undertaken at The University of Hong Kong, where she earned her Ph.D. in 2021 under the supervision of Ir. Prof. Tong Zhang. Her doctoral research centered on the development of bioinformatic tools and the exploration of antibiotic resistance genes (ARGs) and mobile genetic elements (MGEs) in various environmental contexts. This work involved significant contributions to the ARGs-OAP (Antibiotic Resistance Genes - Online Analysis Pipeline), including the development of ARGs-OAP 2.0 with an expanded SARG (Structured Antibiotic Resistance Genes) database and a novel module based on Hidden Markov Models to enhance the detection and discovery of ARGs. Further updates led to ARGs-OAP 3.0, which incorporated visualization packages for more efficient interpretation of ARG profiles and a continuously updated SARG 3.0 database.</p>
-            <p>During her Ph.D., Dr. Yin conducted extensive research, including a nine-year longitudinal metagenomic study of a wastewater treatment plant to characterize the temporal variation of its resistome profile. Her findings demonstrated significant changes in both the abundance and structure of the resistome over time, implying successive selection pressures within the activated sludge system. She also performed comprehensive risk assessments of ARGs in wastewater treatment plants in Hong Kong, comparing their prevalence and MGEs with data from North America, South America, Europe, and Asia. Her research highlighted the high ARG removal efficiency of Hong Kong's WWTPs. Furthermore, Dr. Yin's work involved a broad-scale comparison of ARG pollution levels across diverse ecosystems by analyzing hundreds of publicly available metagenomes, revealing uneven proliferation of ARGs and utilizing machine learning tools to decipher distinctions and connections across these ecosystems.</p>
-            <p>A significant part of her doctoral work also focused on identifying the Horizontal Gene Transfer (HGT) mechanisms of ARGs on integrative and conjugative elements (ICEs) across various taxonomy lineages. This involved analyzing nearly 200,000 genomes and led to the development of ICEcream, a tool designed to classify ICEs and ARGs simultaneously from bacterial genomes. This research identified important ICE families and ARG types carried by them, highlighting the underestimated role of ICEs in ARG dissemination and evolution.</p>
-            <p>Before her current postdoctoral position at Harvard Medical School, Dr. Yin also held a Postdoc position at Hong Kong University, which concluded in December 2023. She has been an international visiting student at the Scientific Research National Center (CNRS-ISTO) in Orleans, France, under the advisement of Prof. Fatima Laggoun in 2015.</p>
-        </section>
+        <div class="container">
+            <aside class="sidebar">
+                <div class="profile-photo">
+                    <img src="images/profile.png" alt="Xiaole Yin">
+                </div>
+                <h2>Contact Information</h2>
+                <ul class="contact-info">
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:xyin@bwh.harvard.edu">xyin@bwh.harvard.edu</a> (Placeholder)</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Brigham and Women's Hospital, 75 Francis St, Boston MA 02115</li>
+                    <li><i class="fab fa-linkedin"></i> <a href="#" id="linkedin-link" target="_blank">LinkedIn</a></li>
+                    <li><i class="fab fa-google-scholar"></i> <a href="#" id="gscholar-link" target="_blank">Google Scholar</a></li>
+                    <li><i class="fab fa-github"></i> <a href="https://github.com/xiaole99" target="_blank">GitHub</a></li>
+                    <li><i class="fab fa-orcid"></i> <a href="#" id="orcid-link" target="_blank">ORCID</a></li> <!-- Corrected ORCID icon -->
+                    <li><i class="fab fa-researchgate"></i> <a href="#" id="researchgate-link" target="_blank">ResearchGate</a></li> <!-- Corrected ResearchGate icon -->
+                </ul>
+            </aside>
 
-        <section id="research-interests">
-            <h2>Research Interests</h2>
-            <!-- Placeholder for research interests -->
-            <p>My research focuses on bioinformatics, particularly in the areas of genomics, computational biology, and the application of machine learning techniques to biological data. I am passionate about understanding the complexities of the human microbiome, investigating the mechanisms of antibiotic resistance in environmental settings, and developing novel multi-omics approaches to unravel biological systems. My work aims to contribute to the development of new diagnostic and therapeutic strategies by leveraging large-scale biological datasets and advanced computational methodologies. I am currently seeking highly motivated PhD students to join my group and explore these exciting research frontiers.</p>
-        </section>
+            <main class="main-content">
+                <section id="hero">
+                    <h1>Xiaole Yin</h1>
+                    <p>Research Fellow in Medicine</p>
+                    <p>Brigham and Women's Hospital, Harvard Medical School</p>
+                </section>
 
-        <section id="publications">
-            <h2>Publications</h2>
-            <ul>
-                <li>Yin X, Chen X, Jiang XT, et al. (2023). Toward a Universal Unit for Quantification of Antibiotic Resistance Genes in Environmental Samples. <em>Environ Sci Technol</em>. 57(26):9713-9721.</li>
-                <li>Yin X, Li L, Chen X, et al. (2023). Global environmental resistome: Distinction and connectivity across diverse habitats benchmarked by metagenomic analyses. <em>Water Res</em>. 235:119875.</li>
-                <li>Yin X, Yang Y, Deng Y, et al. (2022). An assessment of resistome and mobilome in wastewater treatment plants through temporal and spatial metagenomic analysis. <em>Water Res</em>. 209:117885.</li>
-                <li>Yin X, Deng Y, Ma L, et al. (2019). Exploration of the antibiotic resistome in a wastewater treatment plant by a nine-year longitudinal metagenomic study. <em>Environ Int</em>. 133(Pt B):105270.</li>
-                <li>Yin X, Jiang XT, Chai B, et al. (2018). ARGs-OAP v2.0 with an expanded SARG database and Hidden Markov Models for enhancement characterization and quantification of antibiotic resistance genes in environmental metagenomes. <em>Bioinformatics</em>. 34(13):2263-2270.</li>
-            </ul>
-        </section>
+                <section id="biography">
+                    <h2>About Me</h2>
+                    <p>Dr. Xiaole Yin is currently a Research Fellow in Medicine at Brigham and Women’s Hospital, Harvard Medical School in Boston, United States. She obtained her PhD from The University of Hong Kong, supervised by Chair Professor Tong Zhang and earned her master’s and bachelor’s degrees from Shandong University supervised by Professor Jian Zhang. Dr. Yin's research focuses on data-driven exploration of the intricate interactions among the microbiome, humans, and the environment. By developing advanced computational tools and integrating deep learning techniques, her work deciphers the evolution and dissemination of antibiotic resistance genes (ARGs) and pathogens through large-scale metagenomic analyses and predictive modeling. Additionally, she applies cutting-edge bioinformatics to study the role of the microbiome in human gastroenterology, uncovering novel pathogenic mechanisms to guide disease diagnosis and intervention.</p>
+                    <p>She has led the development of several acclaimed bioinformatics tools, such as ARGs-OAP (Antibiotic Resistance Genes - Online Analysis Platform, with 46,506 visits as of Jan 5th, 2025), Sargfam (Hidden Markov Models of ARG genotypes), ARGs-MST, ICEcream, ARGbert, ResistanceWWTP and others.</p>
+                </section>
 
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:xyin@bwh.harvard.edu">xyin@bwh.harvard.edu</a> (Placeholder)</p>
-            <p>Office: Brigham and Women's Hospital, 75 Francis St, Boston MA 02115</p>
-            <p>
-                <a href="#" id="linkedin-link" target="_blank">LinkedIn</a> |
-                <a href="#" id="gscholar-link" target="_blank">Google Scholar</a> |
-                <a href="https://github.com/xiaole99" target="_blank">GitHub</a> |
-                <a href="#" id="orcid-link" target="_blank">ORCID</a> |
-                <a href="#" id="researchgate-link" target="_blank">ResearchGate</a>
-            </p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 Xiaole Yin. All rights reserved.</p>
-    </footer>
-    <script src="js/main.js"></script>
+                <section id="research-interests">
+                    <h2>Research Interests</h2>
+                    <p>My research focuses on computational biology and experimental validatiaon to understand the complexities of the human microbiome, investigating the mechanisms of antibiotic resistance in environmental settings, and developing novel multi-omics approaches to unravel biological systems. My work aims to contribute to the development of new diagnostic and therapeutic strategies by leveraging large-scale biological datasets and advanced computational methodologies.</p>
+                     <h3>PhD Student Opportunities</h3>
+                    <p>We are looking for highly motivated PhD students to join our dynamic research group at Nanyang Technological University. Successful candidates will have the opportunity to work on cutting-edge projects in bioinformatics and computational biology.</p>
+                    <p><strong>Start Date:</strong> January 2026</p>
+                    <p><strong>Application Deadline:</strong> July 25, 2025</p>
+                    <p><strong>Benefits:</strong></p>
+                    <ul>
+                        <li>Full scholarship covering tuition fees and living expenses.</li>
+                        <li>Access to an interdisciplinary research environment with collaborations across various departments.</li>
+                        <li>Numerous opportunities for career development, including conference attendance and workshops.</li>
+                    </ul>
+                    <p>Interested candidates should apply via the Nanyang Technological University admissions portal and are encouraged to contact Dr. Xiaole Yin with a CV and statement of research interests prior to the deadline.</p>
+                </section>
+
+                <section id="publications">
+                    <h2>Publications</h2>
+                    <ul>
+                        <li>Yin X, Liu YY, and Korzenik J (2025), Altered Gut Microbial Sulfur Metabolism in Primary Sclerosing Cholangitis. (Submitted)</li>
+                        <li>Yin, X, Wang T, Deng Y et al. (2025), ICEcream: A Classification Tool Revealing the Underestimated Impact of Integrative and Conjugative Elements on Antibiotic Resistance Gene Transfer. (Submitted)</li>
+                        <li>Yin X, Sasson G,  et al. (2024), Insights into Mechanisms of Disease: Beneficial Effect of Low Protein Diet in Primary Sclerosing Cholangitis Assessed through a Randomized Clinical Trial and Multi-omics Data Analysis. <em>medRxiv</em>. DOI: https://doi.org/10.1101/2024.02.23.24303167.</li>
+                        <li>Yin X, Chen X, Jiang XT, et al. (2023). Toward a Universal Unit for Quantification of Antibiotic Resistance Genes in Environmental Samples. <em>Environ Sci Technol</em>. 57(26):9713-9721.</li>
+                        <li>Yin X, Li L, Chen X, et al. (2023). Global environmental resistome: Distinction and connectivity across diverse habitats benchmarked by metagenomic analyses. <em>Water Res</em>. 235:119875.</li>
+                        <li>Yin X, Yang Y, Deng Y, et al. (2022). An assessment of resistome and mobilome in wastewater treatment plants through temporal and spatial metagenomic analysis. <em>Water Res</em>. 209:117885.</li>
+                        <li>Yin X, Deng Y, Ma L, et al. (2019). Exploration of the antibiotic resistome in a wastewater treatment plant by a nine-year longitudinal metagenomic study. <em>Environ Int</em>. 133(Pt B):105270.</li>
+                        <li>Yin X, Jiang XT, Chai B, et al. (2018). ARGs-OAP v2.0 with an expanded SARG database and Hidden Markov Models for enhancement characterization and quantification of antibiotic resistance genes in environmental metagenomes. <em>Bioinformatics</em>. 34(13):2263-2270.</li>
+                    </ul>
+                </section>
+            </main>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Xiaole Yin. All rights reserved.</p>
+        </footer>
+        <script src="js/main.js"></script>
+    </div>
 </body>
 </html>

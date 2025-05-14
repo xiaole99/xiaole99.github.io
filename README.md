@@ -1,106 +1,79 @@
-# Personal Academic Website for Xiaole Yin
+# Personal Academic Website for Xiaole Yin (Revised)
 
-This repository contains the source code for Xiaole Yin's personal academic website, hosted on GitHub Pages. The website is designed to be clean, professional, modern, and responsive, showcasing academic background, research interests, publications, and contact information.
+This repository contains the source code for Xiaole Yin's revised personal academic website, designed for hosting on GitHub Pages. The website features a clean, professional, modern, and responsive two-column layout (sidebar and main content), a smooth entrance animation, and a vivid light color theme.
 
 ## Website Structure
 
 The website consists of the following main files and directories:
 
-- `index.html`: The main homepage.
-- `people.html`: The page listing lab members and personnel.
-- `css/style.css`: Contains all the styling rules for the website, including the meteor animation.
-- `js/main.js`: Contains JavaScript for dynamic elements, such as the meteor animation and potentially for loading content dynamically in the future.
-- `content/`: This directory holds the editable content for the website in Markdown format.
-    - `biography.md`: Contains the text for the "About Me" section on the homepage.
-    - `research_interests.md`: Contains the text for the "Research Interests" section on the homepage.
-    - `publications.md`: Contains the list of publications for the homepage.
-- `images/`: Placeholder directory for any images used on the website (e.g., profile photo).
+- `index.html`: The main homepage with the two-column layout.
+- `people.html`: The page listing lab members, also with the two-column layout.
+- `css/style.css`: Contains all styling rules, including the entrance animation, two-column layout, color theme, and responsive design adjustments.
+- `js/main.js`: Contains JavaScript, currently for the meteor animation (if kept) and potentially for future dynamic elements. The main entrance animation is CSS-based.
+- `images/`: Contains images used on the website.
+    - `profile.png`: The main profile photo displayed in the sidebar.
+- `content/`: This directory still holds Markdown files (`biography.md`, `research_interests.md`, `publications.md`). However, in the current implementation, the content from these files has been directly integrated into the `index.html`. For future major content updates, you can refer to these Markdown files as a source and then update the corresponding sections in `index.html`.
 
 ## Editing Content
 
-The primary content of the website (biography, research interests, publications) is managed through Markdown files located in the `content/` directory. This allows for easy updates without needing to directly edit HTML code.
+Most content updates will involve editing the HTML files directly, particularly `index.html` and `people.html`.
 
-### How to Edit Sections:
+### 1. Homepage (`index.html`):
 
-1.  **Biography**: To update the "About Me" section, edit the `/home/ubuntu/xiaole_yin_website/content/biography.md` file. Use standard Markdown syntax.
-2.  **Research Interests**: To update the research interests, edit the `/home/ubuntu/xiaole_yin_website/content/research_interests.md` file. Use standard Markdown syntax.
-3.  **Publications**: To update the list of publications, edit the `/home/ubuntu/xiaole_yin_website/content/publications.md` file. Each publication should be a list item in Markdown (e.g., starting with `- `).
-4.  **People Page**: To update information on the `people.html` page (e.g., add new lab members, update existing member details):
-    *   Open the `/home/ubuntu/xiaole_yin_website/people.html` file.
-    *   Locate the `<div class="person">` section for the person you want to edit or add a new similar div structure for a new person.
-    *   Update the `<h3>` for the name, and the `<p>` tags for the role and description directly within the HTML.
-5.  **Contact Information & Links**: To update contact details or external profile links (LinkedIn, Google Scholar, ORCID, ResearchGate, GitHub) on the homepage:
-    *   Open the `/home/ubuntu/xiaole_yin_website/index.html` file.
-    *   Locate the `<section id="contact">`.
-    *   Edit the email address, office address, or the `href` attributes of the `<a>` tags for the profile links.
-    *   The ORCID link is dynamically updated via `js/main.js` if the ORCID ID is changed there. Other links are currently static placeholders in `index.html` but can be made dynamic if their IDs are added to `js/main.js`.
+*   **Profile Photo**: The profile photo is `images/profile.png`. To change it, replace this file with your new photo, ensuring the filename remains the same or update the `src` attribute in the `<img>` tag within the `<aside class="sidebar">` section of `index.html` and `people.html`.
+*   **Contact Information (Sidebar)**: 
+    *   Edit the `ul class="contact-info"` list within the `<aside class="sidebar">` section. 
+    *   Update email addresses, physical address, and links for LinkedIn, Google Scholar, GitHub, ORCID, and ResearchGate. 
+    *   Icons are provided by Font Awesome (ensure the CDN link in the `<head>` of HTML files is present).
+*   **Hero Section (Name, Title, Affiliation)**: Edit the content within `<section id="hero">` in the `<main class="main-content">` area.
+*   **About Me (Biography)**: Edit the paragraphs within `<section id="biography">`.
+*   **Research Interests**: Edit the paragraphs within `<section id="research-interests">`.
+*   **PhD Student Opportunities**: This section is within `<section id="research-interests">`. Update the start date, application deadline, university, and benefits as needed.
+*   **Publications**: Edit the list items (`<li>`) within the `<ul>` in `<section id="publications">`.
 
-### Placeholder Profile Photo:
-The website currently uses a placeholder for the profile photo. To add an actual photo:
-1. Add your photo (e.g., `profile.jpg` or `profile.png`) to the `/home/ubuntu/xiaole_yin_website/images/` directory.
-2. Open `index.html` and find the `<section id="hero">` or create an `<img>` tag within the biography section.
-3. Update the `src` attribute of an `<img>` tag to point to your photo, for example: `<img src="images/profile.jpg" alt="Xiaole Yin">`.
+### 2. People Page (`people.html`):
+
+*   **Sidebar**: The sidebar (profile photo, contact info) is structured similarly to `index.html` and can be edited in the same way if you want it to be identical or customized per page.
+*   **Team Members**: 
+    *   Each person is in a `<div class="person">` within `<section id="people-list">`.
+    *   Edit the `<h3>` for the name, and the `<p>` tags for the role and description.
+    *   To add new members, copy an existing `<div class="person">` block and modify its content.
+
+### 3. Markdown Files (`content/` directory):
+
+While the website currently has content directly in HTML, the `content/` directory contains the Markdown source for key sections (`biography.md`, `research_interests.md`, `publications.md`). You can use these files to draft and manage your text-based content. To update the website, you would then copy the relevant text from these Markdown files and paste it into the appropriate HTML sections in `index.html`.
+
+## Animations
+
+*   **Entrance Animation**: A smooth fade-in and zoom-in animation is applied to the entire page content on load. This is defined in `css/style.css` using `@keyframes fadeInZoom` and applied to the `.entrance-animation` class that wraps the `<body>` content. No JavaScript is needed for this specific animation.
+*   **Meteor Animation**: The previous meteor animation is still present in the CSS. If you wish to remove it, delete the `.meteor` class styles and the `@keyframes fall` from `css/style.css`, and remove the `<div class="meteor"></div>` elements from `index.html` (likely within the `#hero` section if they were kept).
 
 ## Deployment to GitHub Pages
 
-This website is intended to be hosted on GitHub Pages. Your GitHub Pages site will be available at `https://xiaole99.github.io/` if you create a repository named `xiaole99.github.io`.
+This website is intended to be hosted on GitHub Pages. If your GitHub username is `xiaole99`, your GitHub Pages site will be available at `https://xiaole99.github.io/` if you create a repository named `xiaole99.github.io`.
 
-**Steps for Initial Deployment:**
+**Steps for Initial Deployment or Updating:**
 
-1.  **Create a GitHub Repository**: 
-    *   Go to [GitHub](https://github.com) and create a new public repository.
-    *   **Crucially, name this repository `xiaole99.github.io`**. This specific naming convention is required for a user/organization GitHub Pages site.
-2.  **Initialize Git in Your Local Project Folder** (if you were developing locally and not cloning an existing repo):
-    *   Navigate to the root directory of your website project (`/home/ubuntu/xiaole_yin_website/` in this environment).
-    *   Run the following commands:
-        ```bash
-        git init
-        git add .
-        git commit -m "Initial commit of academic website"
-        ```
-3.  **Link Your Local Repository to GitHub**:
-    *   Add the remote repository URL (you can find this on your GitHub repository page):
-        ```bash
-        git remote add origin https://github.com/xiaole99/xiaole99.github.io.git
-        ```
-    *   Verify the remote URL:
-        ```bash
-        git remote -v
-        ```
-4.  **Push Your Code to GitHub**:
-    *   Push your local `main` (or `master`) branch to GitHub:
-        ```bash
-        git push -u origin main  # Or 'master' if that's your default branch name
-        ```
-5.  **Enable GitHub Pages** (usually automatic for `username.github.io` repos):
-    *   Go to your repository settings on GitHub.
-    *   Scroll down to the "GitHub Pages" section.
-    *   Ensure the source is set to deploy from the `main` (or `master`) branch and the `/ (root)` folder.
-    *   Your website should be live at `https://xiaole99.github.io/` within a few minutes.
-
-**Making Updates After Initial Deployment:**
-
-1.  Make your changes to the content (Markdown files) or structure (HTML/CSS/JS files) locally.
-2.  Commit your changes using Git:
+1.  **Create/Use GitHub Repository**: 
+    *   If you haven't already, create a new public GitHub repository named `xiaole99.github.io`.
+    *   If you have an existing repository for the previous version, you can push updates to it.
+2.  **Add Files to Repository**: Place all the website files and folders (`index.html`, `people.html`, `css/`, `js/`, `images/`, `content/`, `README.md`) into the root of this repository.
+3.  **Commit and Push Changes**: 
+    *   Use Git to add, commit, and push your files to the `main` (or `master`) branch of your repository.
     ```bash
     git add .
-    git commit -m "Description of your updates (e.g., updated publications)"
+    git commit -m "Update website with new design and content"
+    git push origin main  # Or master
     ```
-3.  Push the changes to GitHub:
-    ```bash
-    git push origin main # Or 'master'
-    ```
-4.  GitHub Pages will automatically rebuild and redeploy your site with the new changes. This might take a minute or two.
+4.  **Enable GitHub Pages**: 
+    *   Go to your repository settings on GitHub.
+    *   Navigate to the "Pages" section in the left sidebar.
+    *   Ensure the source is set to "Deploy from a branch" and select the `main` (or `master`) branch and `/ (root)` folder.
+    *   Your website should be live at `https://xiaole99.github.io/` within a few minutes. Updates will also trigger an automatic rebuild.
 
-## Custom Domain (Optional)
+## Custom Domain & Google Analytics (Optional)
 
-If you have a custom domain, you can configure it in your GitHub repository settings under the "GitHub Pages" section.
+Refer to the previous `README.md` or official GitHub/Google Analytics documentation for setting these up.
 
-## Google Analytics (Optional)
-
-To integrate Google Analytics:
-1.  Sign up for Google Analytics and get your tracking ID (e.g., `UA-XXXXXXXXX-X` or `G-XXXXXXXXXX`).
-2.  Add the Google Analytics tracking code snippet to the `<head>` section of your `index.html` and `people.html` files. You can find the appropriate snippet in your Google Analytics account.
-
-This guide should help you maintain and update your academic website. If you encounter any issues, refer to the official [GitHub Pages documentation](https://docs.github.com/en/pages).
+This guide should help you maintain and update your revised academic website. If you encounter any issues, refer to the official [GitHub Pages documentation](https://docs.github.com/en/pages).
 
