@@ -1,8 +1,0 @@
-- Yin X, Liu YY, and Korzenik J (2025), Altered Gut Microbial Sulfur Metabolism in Primary Sclerosing Cholangitis. (Submitted)
-- Yin, X, Wang T, Deng Y et al. (2025), ICEcream: A Classification Tool Revealing the Underestimated Impact of Integrative and Conjugative Elements on Antibiotic Resistance Gene Transfer. (Submitted)
-- Yin X, Sasson G,  et al. (2024), Insights into Mechanisms of Disease: Beneficial Effect of Low Protein Diet in Primary Sclerosing Cholangitis Assessed through a Randomized Clinical Trial and Multi-omics Data Analysis. *medRxiv*. DOI: https://doi.org/10.1101/2024.02.23.24303167.
-- Yin X, Chen X, Jiang XT, et al. (2023). Toward a Universal Unit for Quantification of Antibiotic Resistance Genes in Environmental Samples. *Environ Sci Technol*. 57(26):9713-9721.
-- Yin X, Li L, Chen X, et al. (2023). Global environmental resistome: Distinction and connectivity across diverse habitats benchmarked by metagenomic analyses. *Water Res*. 235:119875.
-- Yin X, Yang Y, Deng Y, et al. (2022). An assessment of resistome and mobilome in wastewater treatment plants through temporal and spatial metagenomic analysis. *Water Res*. 209:117885.
-- Yin X, Deng Y, Ma L, et al. (2019). Exploration of the antibiotic resistome in a wastewater treatment plant by a nine-year longitudinal metagenomic study. *Environ Int*. 133(Pt B):105270.
-- Yin X, Jiang XT, Chai B, et al. (2018). ARGs-OAP v2.0 with an expanded SARG database and Hidden Markov Models for enhancement characterization and quantification of antibiotic resistance genes in environmental metagenomes. *Bioinformatics*. 34(13):2263-2270.
