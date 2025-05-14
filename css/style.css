@@ -1,24 +1,3 @@
-/* Color contact icons by platform */
-.contact-info i.fa-envelope {
-    color: #D44638; /* Gmail */
-}
-
-.contact-info i.fa-map-marker-alt {
-    color: #EA4335; /* Map Marker */
-}
-
-.contact-info i.fa-linkedin {
-    color: #0077B5; /* LinkedIn Blue */
-}
-
-.contact-info i.fa-google-scholar {
-    color: #4285F4; /* Google Scholar Blue */
-}
-
-.contact-info i.fa-github {
-    color: #333333; /* GitHub */
-}
-
 /* Basic Reset */
 * {
     margin: 0;
@@ -142,6 +121,24 @@ header nav ul li a:hover {
 .sidebar .contact-info li a:hover {
     text-decoration: underline;
 }
+
+/* Color contact icons by platform */
+.contact-info i.fa-envelope {
+    color: #D44638; /* Gmail */
+}
+.contact-info i.fa-map-marker-alt {
+    color: #EA4335; /* Map Marker */
+}
+.contact-info i.fa-linkedin {
+    color: #0077B5; /* LinkedIn Blue */
+}
+.contact-info i.fa-google-scholar {
+    color: #4285F4; /* Google Scholar Blue */
+}
+.contact-info i.fa-github {
+    color: #333333; /* GitHub */
+}
+
 
 .main-content {
     flex: 1;
