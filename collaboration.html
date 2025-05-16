@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collaboration - Xiaole Yin</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .collab-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+        .collab-card {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            padding: 1.5rem;
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: box-shadow 0.3s;
+        }
+        .collab-card:hover {
+            box-shadow: 0 4px 24px rgba(0,0,0,0.16);
+        }
+        .university-logo {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            margin-bottom: 1rem;
+        }
+        .collab-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 0.2rem;
+        }
+        .collab-affiliation {
+            font-size: 1rem;
+            margin-bottom: 0.7rem;
+            text-align: center;
+        }
+        .collab-link {
+            color: #2b7ae4;
+            text-decoration: none;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.3em;
+            transition: color 0.2s;
+        }
+        .collab-link:hover {
+            color: #1d4ed8;
+        }
+    </style>
+</head>
+<body>
+    <div class="entrance-animation">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="people.html">People</a></li>
+                    <li><a href="collaboration.html">Collaboration</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="container">
+            <main class="main-content">
+                <section id="collaborators">
+                    <h2>Collaborations</h2>
+                    <div class="collab-container">
+                        <!-- Example Collaborator Card -->
+                        <div class="collab-card">
+                            <img src="images/harvard_logo.png" alt="Harvard University" class="university-logo">
+                            <div class="collab-name">Dr. Xu-Wen Wang</div>
+                            <div class="collab-affiliation">Harvard Medical School<br>Brigham and Women's Hospital</div>
+                            <a class="collab-link" href="https://cdnm.bwh.harvard.edu/xu-wen-wang-phd/" target="_blank">
+                                Visit Website <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                        <div class="collab-card">
+                            <img src="images/hku_logo.png" alt="Hong Kong University" class="university-logo">
+                            <div class="collab-name">Chair Prof. Tong Zhang</div>
+                            <div class="collab-affiliation">Hong Kong University<br>Department of Civil and Environmental Engineering; School of Publich Health</div>
+                            <a class="collab-link" href="https://sph.hku.hk/en/Biography/Zhang-Tong" target="_blank">
+                                Visit Website <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                        <div class="collab-card">
+                            <img src="images/osu_logo.png" alt="The Ohio State University" class="university-logo">
+                            <div class="collab-name">Dr. Shanlin Ke</div>
+                            <div class="collab-affiliation">The Ohio State University<br>Internal Medicine</div>
+                            <a class="collab-link" href="https://shanlinke.github.io/" target="_blank">
+                                Visit Website <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                        <div class="collab-card">
+                            <img src="images/unc_logo.png" alt="University of North Carolina at Chapel Hill" class="university-logo">
+                            <div class="collab-name">Dr. Can Chen</div>
+                            <div class="collab-affiliation">University of North Carolina at Chapel Hill<br>School of Data Science and Society</div>
+                            <a class="collab-link" href="https://datascience.unc.edu/person/can-chen/" target="_blank">
+                                Visit Website <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+        <footer>
+            <p>&copy; 2025 Xiaole Yin. All rights reserved.</p>
+        </footer>
+        <script src="js/main.js"></script>
+    </div>
+</body>
+</html>
+
